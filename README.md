@@ -26,12 +26,10 @@ game.Players.PlayerAdded:Connect(function(player)
     end)
 end)
 
--- ลบท้องฟ้า (Sky)
 if game.Lighting:FindFirstChildOfClass("Sky") then
     game.Lighting:FindFirstChildOfClass("Sky"):Destroy()
 end
 
--- ลบต้นไม้ (ชื่อมีคำว่า "Tree")
 for _, obj in pairs(game.Workspace:GetDescendants()) do
     if obj:IsA("Model") and obj.Name:lower():find("tree") then
         obj:Destroy()
